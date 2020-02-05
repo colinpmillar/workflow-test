@@ -20,3 +20,5 @@ jobs:
         run: Rscript -e 'icesTAF::taf.bootstrap(software=FALSE)'
       - name: run sourceAll
         run: Rscript -e 'icesTAF::sourceAll()'
+      - name: print directory structure again
+        run: Rscript -e 'dir(recursive = TRUE)'   
