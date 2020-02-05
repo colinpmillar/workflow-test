@@ -4,9 +4,9 @@ jobs:
   build:
     
     runs-on: ubuntu-latest
-    container: 'rocker/r-base:latest'
+    container: 'rocker/tidyverse:latest'
 
     steps:
       - uses: actions/checkout@v2
       - name: run something in R
-        run: Rscript -e 'date()' -e 'format(Sys.time(), "%a %b %d %X %Y")'
+        run: Rscript -e 'sessioninfo::session_info()'
