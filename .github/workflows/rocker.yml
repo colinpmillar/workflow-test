@@ -10,7 +10,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: install icesTAF
         run: Rscript -e 'install.packages("icesTAF")'
+      - name: install icesSAG
+        run: Rscript -e 'remotes::install_github("ices-tools-prod/icesSAG@dc9098f")'
       - name: run bootstrap
-        run: Rscript -e 'icesTAF::taf.bootstrap()'
+        run: Rscript -e 'icesTAF::taf.bootstrap(software=FALSE)'
       - name: run sourceAll
         run: Rscript -e 'icesTAF::sourceAll()'
