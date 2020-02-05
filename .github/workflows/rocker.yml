@@ -11,7 +11,7 @@ jobs:
       - name: install icesTAF
         run: Rscript -e 'install.packages("icesTAF")'
       - name: install icesSAG
-        run: Rscript -e 'remotes::install_github("ices-tools-prod/icesSAG@master")'
+        run: Rscript -e 'remotes::install_github("ices-tools-prod/icesSAG@development")'
       - name: getwd 
         run: Rscript -e 'getwd()'
       - name: print directory structure
