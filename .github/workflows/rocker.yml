@@ -8,5 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: run something in R
-        run: Rscript -e 'sessioninfo::session_info()'
+      - name: install icesTAF
+        run: Rscript -e 'install.packages(\"icesTAF\")'
+      - name: run bootstrap
+        run: Rscript -e 'icesTAF::taf.boostrap()'
