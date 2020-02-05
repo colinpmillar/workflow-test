@@ -21,4 +21,14 @@ jobs:
       - name: run sourceAll
         run: Rscript -e 'icesTAF::sourceAll()'
       - name: print directory structure again
-        run: Rscript -e 'dir(recursive = TRUE)'   
+        run: Rscript -e 'dir(recursive = TRUE)'
+      - name: Commit files
+        run: |
+          git config --local user.email "ices@github.com"
+          git config --local user.name "ices-github-bot"
+          git add --all -f
+          git commit -m "Add worflow results"
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
