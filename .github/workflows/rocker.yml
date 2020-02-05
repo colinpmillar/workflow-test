@@ -1,9 +1,12 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  build:
+    
     runs-on: ubuntu-latest
-    name: A job to say hello from R
+    container: 'rocker/r-base:latest'
+
     steps:
-    - name: run something in R
-      uses: colinpmillar/action-test@master
+      - uses: actions/checkout@v2
+      - name: run something in R
+        run: Rscript -e 'date()' -e 'format(Sys.time(), "%a %b %d %X %Y")'
