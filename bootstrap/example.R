@@ -4,7 +4,7 @@
 library(icesTAF)
 
 # use an analysis specific package
-taf.library(icesSAG)
+library(icesSAG)
 
 # download summary data for cod in the North Sea
 key <- findAssessmentKey("cod.27.47d20", year = 2018)
