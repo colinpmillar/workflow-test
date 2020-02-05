@@ -4,7 +4,7 @@ bootstrap/software/
 bootstrap/library/
 bootstrap/data/
 
-data/
-model/
-output/
-report/
+/data/
+/model/
+/output/
+/report/
