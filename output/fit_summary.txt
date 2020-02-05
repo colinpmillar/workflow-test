@@ -1,0 +1,24 @@
+
+Call:
+glm(formula = recruitment ~ ssb + offset(log(ssb)), family = Gamma(log), 
+    data = recssb)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.3383  -0.5912  -0.2013   0.1928   1.4436  
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1.497e+00  2.222e-01   6.740 1.18e-08 ***
+ssb         5.748e-07  1.545e-06   0.372    0.711    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Gamma family taken to be 0.4757884)
+
+    Null deviance: 23.890  on 54  degrees of freedom
+Residual deviance: 23.838  on 53  degrees of freedom
+AIC: 1553.5
+
+Number of Fisher Scoring iterations: 5
+
