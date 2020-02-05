@@ -11,4 +11,6 @@ jobs:
       - name: install icesTAF
         run: Rscript -e 'install.packages("icesTAF")'
       - name: run bootstrap
-        run: Rscript -e 'icesTAF::taf.boostrap()'
+        run: Rscript -e 'icesTAF::taf.bootstrap()'
+      - name: run sourceAll
+        run: Rscript -e 'icesTAF::sourceAll()'
