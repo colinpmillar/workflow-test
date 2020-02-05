@@ -12,6 +12,10 @@ jobs:
         run: Rscript -e 'install.packages("icesTAF")'
       - name: install icesSAG
         run: Rscript -e 'remotes::install_github("ices-tools-prod/icesSAG@dc9098f")'
+      - name: getwd 
+        run: Rscript -e 'getwd()'
+      - name: print directory structure
+        run: Rscript -e 'dir(recursive = TRUE)'   
       - name: run bootstrap
         run: Rscript -e 'icesTAF::taf.bootstrap(software=FALSE)'
       - name: run sourceAll
