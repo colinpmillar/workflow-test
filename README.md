@@ -1,5 +1,3 @@
-[![Build status](https://devops.ices.dk/ICES/DataCentre/_apis/build/status/TAF-CI)](https://devops.ices.dk/ICES/DataCentre/_build/latest?definitionId=1)
-
 # 2019_TAF_template
 
 ## Tempate repository for all TAF analyses
